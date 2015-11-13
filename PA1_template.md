@@ -30,23 +30,23 @@ box()
 ![](PA1_template_files/figure-html/unnamed-chunk-1-1.png) 
 
 ###Mean and median of the total number of steps taken per day
+####mean
 
 ```r
-originalmean <- mean(ms$steps)
-paste("mean = ",round(originalmean,digits=2))
+(originalmean <- mean(ms$steps))
 ```
 
 ```
-## [1] "mean =  10766.19"
+## [1] 10766
 ```
+####median
 
 ```r
-originalmedian <- median(ms$steps)
-paste("median = ",originalmedian)
+(originalmedian <- median(ms$steps))
 ```
 
 ```
-## [1] "median =  10765"
+## [1] 10765
 ```
 
 ##What is the average daily activity pattern?
@@ -57,7 +57,7 @@ plot(intsteps,type="l",xlab="5 minute intervals (500 = 5AM, 2000 = 8PM)",
      main ="5-minute interval, on average across all the days")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
 
 ###Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -102,26 +102,26 @@ legend("topright",c("Original data","NA substituted data"), text.col=(c("palevio
 box()
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-8-1.png) 
 
 ####Calculate and report the mean and median total number of steps taken per day
+#####mean of data with na's imputed
 
 ```r
-substituteddatamean <- mean(ms1$steps)
-paste("mean of date with missing values imputed = ",round(substituteddatamean,digits = 2))
+(substituteddatamean <- mean(ms1$steps))
 ```
 
 ```
-## [1] "mean of date with missing values imputed =  10766.19"
+## [1] 10766
 ```
+#####median of data with na's imputed
 
 ```r
-substituteddatamedian <- median(ms1$steps)
-paste("median of date with missing values imputed = ",round(substituteddatamedian,digits = 2))
+(substituteddatamedian <- median(ms1$steps))
 ```
 
 ```
-## [1] "median of date with missing values imputed =  10766.19"
+## [1] 10766
 ```
 ####Do these values differ from the estimates from the first part of the assignment?
 As can be seen in the following calculation the mean did not vary and the median slightly varied.
@@ -171,7 +171,7 @@ p <- p + facet_wrap(~day, nrow=2)
 print(p)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-10-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-12-1.png) 
 
 
 
