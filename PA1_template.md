@@ -60,14 +60,14 @@ plot(intsteps,type="l",xlab="5 minute intervals (500 = 5AM, 2000 = 8PM)",
 ###Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
 ```r
-intsteps[max(intsteps$steps),"interval"]
+intsteps[which(intsteps$steps == max(intsteps$steps)),"interval"]
 ```
 
 ```
-## [1] 1705
+## [1] 835
 ```
 
-Max 5-minute interval = 1705
+Max 5-minute interval = 835
 
 ##Imputing missing values
 ###Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)
