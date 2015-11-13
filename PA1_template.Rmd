@@ -5,10 +5,6 @@ output:
     keep_md: true
 ---
 
----
-title: "proj1"
-output: html_document
----
 
 ##Loading and preprocessing the data
 ```{r read data}

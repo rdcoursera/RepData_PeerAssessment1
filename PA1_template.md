@@ -1,9 +1,5 @@
 # Reproducible Research: Peer Assessment 1
 
----
-title: "proj1"
-output: html_document
----
 
 ##Loading and preprocessing the data
 
