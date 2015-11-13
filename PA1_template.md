@@ -80,7 +80,8 @@ sum(!complete.cases(act))
 ## [1] 2304
 ```
 ###Create a new dataset that is equal to the original dataset but with the missing data filled in.
-####For this exercise fill in na's with mean for the given 5-minute interval
+####Description of a strategy for imputing missing data
+For this exercise we will fill in na's with the mean for the given 5-minute interval
 
 
 ```r
@@ -88,7 +89,7 @@ sum(!complete.cases(act))
 tract <- act
 tract$steps <- ifelse(is.na(act$steps),intsteps$steps[match(act$interval, intsteps$interval)],act$steps)
 ```
-###Make a histogram of the total number of steps taken each day  
+###Make a histogram of the total number of steps taken each day after missing values imputed
 
 
 ```r
@@ -159,6 +160,7 @@ mstractweekdaysa$day <- "Weekday"
 merged <- rbind(mstractweekdaysa,mstractweekendsa)
 #make the panel plot
 p <- ggplot(data = merged, aes(x=interval, y=steps)) 
+p <- p + ggtitle("5-minute interval, on average across all the days")
 p <- p + geom_line() + ylab("Number of Steps")
 p <- p + xlab("5 minute intervals (500 = 5AM, 2000 = 8PM)")
 p <- p + facet_wrap(~day, nrow=2)
