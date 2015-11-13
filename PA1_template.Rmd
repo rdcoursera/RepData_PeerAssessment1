@@ -34,8 +34,10 @@ box()
 
 ###Mean and median of the total number of steps taken per day
 ```{r}
-(originalmean <- mean(ms$steps))
-(originalmedian <- median(ms$steps))
+originalmean <- mean(ms$steps)
+paste("mean = ",round(originalmean,digits=2))
+originalmedian <- median(ms$steps)
+paste("median = ",originalmedian)
 ```
 
 ##What is the average daily activity pattern?
@@ -79,8 +81,10 @@ box()
 
 ####Calculate and report the mean and median total number of steps taken per day
 ```{r}
-(substituteddatamean <- mean(ms1$steps))
-(substituteddatamedian <- median(ms1$steps))
+substituteddatamean <- mean(ms1$steps)
+paste("mean of date with missing values imputed = ",round(substituteddatamean,digits = 2))
+substituteddatamedian <- median(ms1$steps)
+paste("median of date with missing values imputed = ",round(substituteddatamedian,digits = 2))
 ```
 ####Do these values differ from the estimates from the first part of the assignment?
 As can be seen in the following calculation the mean did not vary and the median slightly varied.
