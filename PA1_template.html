@@ -123,7 +123,7 @@ plot(intsteps,type=&quot;l&quot;,xlab=&quot;5 minute intervals (500 = 5AM, 2000 
 <h3>Create a new dataset that is equal to the original dataset but with the missing data filled in.</h3>
 <div id="description-of-a-strategy-for-imputing-missing-data" class="section level4">
 <h4>Description of a strategy for imputing missing data</h4>
-<p>For this exercise we will fill in na’s with the mean for the given 5-minute interval</p>
+<p>For this exercise we will fill in na’s with the mean for the given 5-minute interval. For example if the interval 800 has an “NA” for a value then the average overall value for the 800 interval will be substituded.</p>
 <pre class="r"><code>#fillin missing steps with interval average
 tract &lt;- act
 tract$steps &lt;- ifelse(is.na(act$steps),intsteps$steps[match(act$interval, intsteps$interval)],act$steps)</code></pre>

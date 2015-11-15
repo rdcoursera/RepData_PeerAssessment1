@@ -83,7 +83,7 @@ sum(!complete.cases(act))
 ```
 ###Create a new dataset that is equal to the original dataset but with the missing data filled in.
 ####Description of a strategy for imputing missing data
-For this exercise we will fill in na's with the mean for the given 5-minute interval
+For this exercise we will fill in na's with the mean for the given 5-minute interval.  For example if the interval 800 has an "NA" for a value then the average overall value for the 800 interval will be substituded.
 
 
 ```r
